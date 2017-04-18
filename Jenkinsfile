@@ -34,7 +34,6 @@ pipeline {
         image 'manala/deploy'
         reuseNode true
       } }
-      when { branch 'staging' }
       environment {
           DEPLOY_DESTINATION = credentials('DEPLOY_DESTINATION')
           DEPLOY_RSH = credentials('DEPLOY_RSH')
