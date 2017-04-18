@@ -1,0 +1,34 @@
+---
+
+baseURL:        "http://manala.io/"
+languageCode:   "en-us"
+title:          "Manala project"
+
+params:
+  Subtitle: "Spinning the cogs in the widgets"
+  AuthorName: "ELAO"
+
+menu:
+  main:
+      - Name:       "About"
+        Identifier: "about"
+        URL:        "/about"
+        Weight:     80
+      - Name:       "How-to's"
+        Identifier: "howto"
+        URL:        "/howto"
+        Weight:     90
+      #- Name:       "Contributors"
+      #  Identifier: "contributors"
+      #  URL:        "/contributors"
+      #  Weight:     110
+  sidebar:
+      - Name:       "Mon lien 1"
+        Identifier: "mon-lien-1"
+        URL:        "/about/mon-lien-1"
+      - Name:       "Mon lien 2"
+        Identifier: "mon-lien-2"
+        URL:        "/about/mon-lien-2"
+      - Name:       "Mon lien 3"
+        Identifier: "mon-lien-3"
+        URL:        "/about/mon-lien-3"

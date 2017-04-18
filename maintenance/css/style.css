@@ -1,0 +1,191 @@
+body {
+    font-family: "Open sans";
+    text-align: center;
+    color: #82817d;
+    background: url(../images/background-beige.png);
+}
+
+.container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.container-coming-soon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.coming-soon h1 {
+    font-family: "Open sans";
+    font-weight: 300;
+    margin: 0;
+    color: #82817d;
+}
+
+.coming-soon .logo {
+    position: relative;
+}
+.coming-soon .logo img {
+    margin-top: 55px;
+}
+.coming-soon .logo h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 200px;
+    margin: 0 0 15% 0;
+    font-weight: normal;
+    color: #f66c51;
+}
+
+.coming-soon .circle-1,
+.coming-soon .circle-2,
+.coming-soon .circle-3,
+.coming-soon .circle-4,
+.coming-soon .circle-5,
+.coming-soon .circle-6,
+.coming-soon .circle-7 {
+    position: absolute;
+    z-index: 800;
+    border-radius: 20px;
+    width: 10px;
+    height: 10px;
+}
+.coming-soon .circle-1 {
+    top: 105px;
+    left: 0px;
+    background: #f66c51;
+}
+.coming-soon .circle-2 {
+    top: 105px;
+    right: 50px;
+    border: solid 4px #d69d57;
+}
+.coming-soon .circle-3 {
+    top: 65px;
+    right: 0px;
+    background: #8d6738;
+}
+.coming-soon .circle-4 {
+    top: 65px;
+    left: 50px;
+    border: solid 4px #8d6738;
+}
+.coming-soon .circle-5 {
+    bottom: -40px;
+    right: 280px;
+    border: solid 4px #f66c51;
+}
+.coming-soon .circle-6 {
+    bottom: 20px;
+    left: 260px;
+    background: #d69d57;
+}
+
+
+.coming-soon-info {
+    font-family: "Open sans";
+    position: relative;
+    line-height: 28px;
+    font-size: 18px;
+    margin: 0;
+}
+
+.coming-soon-info a.button {
+    font-family: "Open sans";
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    padding: 10px 25px;
+    border: solid #f66c51 1px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #f66c51;
+    text-decoration: none;
+    transition: all 0.15s linear;
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -o-transition: all 0.15s linear;
+}
+.coming-soon-info a.button:hover {
+    background: #f66c51;
+    color: #FFFFFF;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .container-coming-soon {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+    .coming-soon h1 {
+        font-size: 16px;
+    }
+    .coming-soon .logo img {
+        margin-top: 35px;
+    }
+    .coming-soon .logo h2 {
+        font-size: 90px;
+        margin: 0;
+    }
+    .coming-soon-info {
+        line-height: 24px;
+        font-size: 14px;
+        margin: 0;
+    }
+    .coming-soon-info a.button {
+        font-size: 14px;
+        letter-spacing: 3px;
+        padding: 10px 25px;
+    }
+    .coming-soon .circle-2 {
+        right: 20px;
+    }
+    .coming-soon .circle-4 {
+        left: 25px;
+    }
+    .coming-soon .circle-5 {
+        display: none;
+    }
+}
+
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+    .container-coming-soon {
+        top: 37%;
+        left: 50%;
+        transform: translate(-50%, -37%);
+        -webkit-transform: translate(-50%, -37%);
+        -moz-transform: translate(-50%, -37%);
+        -o-transform: translate(-50%, -37%);
+    }
+    .coming-soon h1 {
+        font-size: 18px;
+    }
+    .coming-soon .logo img {
+        margin-top: 55px;
+    }
+    .coming-soon .logo h2 {
+        font-size: 100px;
+        margin: 0;
+    }
+    .coming-soon-info {
+        line-height: 24px;
+        font-size: 14px;
+        margin: -10px 0 0 0;
+    }
+    .coming-soon-info a.button {
+        font-size: 14px;
+        letter-spacing: 3px;
+        padding: 10px 25px;
+    }
+    .coming-soon .circle-5 {
+        display: none;
+    }
+}
