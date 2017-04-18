@@ -3,7 +3,7 @@ HUGO = hugo \
 	$(if $(HUGO_THEME),--theme $(HUGO_THEME)) \
 	$(HUGO_OPTIONS)
 
-HUGO = hugo server \
+HUGO_SERVER = hugo server \
 	--verbose \
 	$(if $(HUGO_THEME),--theme $(HUGO_THEME)) \
 	$(HUGO_OPTIONS) \
