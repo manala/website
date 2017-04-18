@@ -1,31 +1,46 @@
 #!groovy
 
+def app = [
+  env: (env.BRANCH_NAME == 'master') ? 'production' : 'staging'
+]
+
 pipeline {
-  agent none
+  agent { label 'docker' }
   options {
     ansiColor('xterm')
     timestamps()
   }
   stages {
-    stage('Build') {
-      agent { docker 'manala/hugo' }
+    stage('Install') {
+      agent { docker {
+        image 'manala/hugo'
+        reuseNode true
+      } }
       steps {
-        sh 'make install@staging'
-        sh 'make build@staging'
-        stash includes: 'public/', name: 'public'
+        sh "make install@$app.env"
+      }
+    }
+    stage('Build') {
+      agent { docker {
+        image 'manala/hugo'
+        reuseNode true
+      } }
+      steps {
+        sh "make build@$app.env"
       }
     }
     stage('Deploy') {
-      agent { docker 'manala/deploy' }
-      when { branch 'staging' }
+      agent { docker {
+        image 'manala/deploy'
+        reuseNode true
+      } }
       environment {
           DEPLOY_DESTINATION = credentials('DEPLOY_DESTINATION')
           DEPLOY_RSH = credentials('DEPLOY_RSH')
       }
       steps {
-        unstash 'public'
         sshagent (credentials: ['deploy']) {
-          sh 'make deploy-staging'
+          sh "make deploy-$app.env DEPLOY_DESTINATION=${env.DEPLOY_DESTINATION + '/' + env.BRANCH_NAME}"
         }
       }
     }
