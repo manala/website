@@ -1,9 +1,4 @@
-html { height: 100%; }
-
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
     background: $background-color;
     font-family: $base-font-family;
     font-size: $base-font-size;
@@ -26,16 +21,17 @@ header.header {
 
 .container { display: flex; }
 .main { flex-direction: column; }
-.main, .content { flex-grow: 1; }
 
-.aside {
+aside.aside {
     padding: 0;
-    box-shadow: 0 2px 45px rgba(0, 0, 0, .1);
+    border: solid 1px #f1f1f1;
     border-radius: 3px;
+    background-color: #f7f7f7;
 }
 
 .intro {
-    width: 90%;
+    width: 100%;
+    max-width: 720px;
     padding: 0 15px;
     margin: 0 auto 90px auto;
     text-align: center;
@@ -78,11 +74,15 @@ footer.footer {
     .manala {
         font-size: 60px;
 
-        img { @include size(56px); }
+        img {
+            width: 56px;
+            height: 56px;
+        }
     }
 
     .github img {
-        @include size(32px);
+        width: 32px;
+        height: 32px;
         margin: 12px 0;
     }
 
@@ -90,7 +90,8 @@ footer.footer {
         text-align: right;
 
         img {
-            @include size(63px, 24px);
+            width: 63px;
+            height: 24px;
             margin: 15px 0 17px 2px;
         }
     }
