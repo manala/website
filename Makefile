@@ -5,17 +5,6 @@
 HUGO_THEME = 2016
 
 include  manala/make/Makefile
--include Makefile.local
-
-################
-# Environments #
-################
-
-# Development
-%@development: HUGO_OPTIONS += --buildDrafts --buildFuture
-
-# Staging
-%@staging: HUGO_OPTIONS += --buildDrafts --buildFuture
 
 #########
 # Setup #
