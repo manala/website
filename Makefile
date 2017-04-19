@@ -58,7 +58,7 @@ build@development:
 	$(MAKE_HUGO_THEME) build@development
 
 	$(call log,Hugo)
-	rm -Rf public && $(HUGO)
+	$(HUGO)
 
 ## Build - Staging
 build@staging:
@@ -66,7 +66,7 @@ build@staging:
 	$(MAKE_HUGO_THEME) build@staging
 
 	$(call log,Hugo)
-	rm -Rf public && $(HUGO)
+	$(HUGO)
 
 	$(call log,Optimize images)
 	find public/images -iname "*.png" -type f -exec optipng -quiet -o7 {} \;
@@ -78,7 +78,7 @@ build@production:
 	$(MAKE_HUGO_THEME) build@production
 
 	$(call log,Hugo)
-	rm -Rf public && $(HUGO)
+	$(HUGO)
 
 	$(call log,Optimize images)
 	find public/images -iname "*.png" -type f -exec optipng -quiet -o7 {} \;
