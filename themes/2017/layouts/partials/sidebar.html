@@ -1,0 +1,10 @@
+<div class="col-sm-3 sidebar">
+    <nav class="fixed">
+        <ul>
+            {{ $currentNode := . }}
+            {{ range .Site.Menus.sidebar }}
+                <li {{ if ($currentNode.HasMenuCurrent "sidebar" .) }} class="active" {{end}}><a href="{{.URL}}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+</div>

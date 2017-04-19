@@ -1,0 +1,12 @@
+<div class="navbar">
+    <div class="container">
+        <a href="/index.html" class="logo">manala</a>
+        <nav>
+            <ul>
+                {{ range .Site.Menus.main }}
+                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                {{ end }}
+            </ul>
+        </nav>
+    </div>
+</div>

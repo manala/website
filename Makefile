@@ -6,7 +6,7 @@
 ##########
 
 # Hugo
-HUGO_THEME = 2016
+HUGO_THEME = 2017
 
 include  manala/make/Makefile
 -include .env
