@@ -56,6 +56,7 @@ build: $(call proxy,build)
 build@development:
 	# Theme
 	$(MAKE_HUGO_THEME) build@development
+
 	$(call log,Hugo)
 	rm -Rf public && $(HUGO)
 
@@ -63,6 +64,7 @@ build@development:
 build@staging:
 	# Theme
 	$(MAKE_HUGO_THEME) build@staging
+
 	$(call log,Hugo)
 	rm -Rf public && $(HUGO)
 
@@ -74,6 +76,7 @@ build@staging:
 build@production:
 	# Theme
 	$(MAKE_HUGO_THEME) build@production
+
 	$(call log,Hugo)
 	rm -Rf public && $(HUGO)
 
@@ -86,11 +89,10 @@ build@production:
 #########
 
 ## Watch
-watch: DOCKER_OPTIONS = --publish 1313:1313
-watch: DOCKER_SHELL   = dumb-init sh
 watch: $(call proxy,watch)
 
 ## Watch - Development
+watch@development: SHELL = dumb-init sh
 watch@development:
 	# Theme
 	$(MAKE_HUGO_THEME) watch@development & \
