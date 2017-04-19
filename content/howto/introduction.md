@@ -25,7 +25,7 @@ And most of all, maintainable.
 
 The main structure of a standard manala project is the following
 
-```
+{{< highlight shell >}}
 ├── files
 ├── group_vars
 ├── host_vars
@@ -35,6 +35,6 @@ The main structure of a standard manala project is the following
 ├── README.md
 ├── templates
 └── roles.yml
-```
+{{< /highlight >}}
 
 We will now begin by defining the [hosts file](/howto/the-hosts-file).

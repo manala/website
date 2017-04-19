@@ -16,7 +16,7 @@ Group vars with no surprise will store group's environment definitions. Beginnin
 
 ## all.yml
 
-```
+{{< highlight yaml >}}
 ---
 
 ##########
@@ -30,13 +30,13 @@ domain: manala.example
 #######
 
 env: prod
-```
+{{< /highlight >}}
 
 ### Options
 
 This part will be responsible for defining cross containers variables like ssh keys.
 
-```
+{{< highlight yaml >}}
 all_options:
 
   # Team infra
@@ -57,11 +57,11 @@ all_options:
   authorized_keys_app:
     - "{{ lookup('file', playbook_dir ~ '/files/users/keys/benjamin.leveque@manala.io.pub') }}"
     - "{{ lookup('file', playbook_dir ~ '/files/users/keys/maxime.colin@manala.io.pub') }}"
-```
+{{< /highlight >}}
 
 ### Patterns
 
-```
+{{< highlight yaml >}}
 all_patterns:
 
   ########
@@ -89,4 +89,4 @@ all_patterns:
   #######
 
   git_config_template: config/default.{{ env }}.j2
-```
+{{< /highlight >}}
