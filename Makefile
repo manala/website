@@ -66,12 +66,20 @@ build@staging:
 	$(call log,Hugo)
 	rm -Rf public && $(HUGO)
 
+	$(call log,Optimize images)
+	find public/images -iname "*.png" -type f -exec optipng -quiet -o7 {} \;
+	find public/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \;
+
 ## Build - Production
 build@production:
 	# Theme
 	$(MAKE_HUGO_THEME) build@production
 	$(call log,Hugo)
 	rm -Rf public && $(HUGO)
+
+	$(call log,Optimize images)
+	find public/images -iname "*.png" -type f -exec optipng -quiet -o7 {} \;
+	find public/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \;
 
 #########
 # Watch #
