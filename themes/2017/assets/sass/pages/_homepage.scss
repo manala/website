@@ -1,0 +1,21 @@
+.homepage {
+    .navbar {
+        background: none;
+        margin-bottom: 0;
+
+        .logo { color: $main-color; }
+
+        nav {
+            ul {
+                li {
+                    a { color: $main-color; }
+
+                    a:hover, &.active a {
+                        color: #FFF;
+                        background-color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.navbar {
+    background-color: transparentize($main-color, 0.08);
+    z-index: 100;
+    margin-bottom: 80px;
+
+    > .container {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    nav, .logo { margin-top: 10px; }
+
+    nav { margin-left: auto; }
+
+    .logo {
+        line-height: 100px;
+        font-family: $manala-font;
+        font-size: 100px;
+        display: inline-block;
+        color: #FFF;
+        width: 33.333%;
+        text-align: center;
+
+        &:hover { text-decoration: none; }
+    }
+
+    nav {
+        float: right;
+
+        ul {
+            list-style: none;
+            margin: 0;
+
+            li {
+                display: inline-block;
+                font-size: 18px;
+                margin-left: 10px;
+
+                a {
+                    padding: 6px 12px;
+                    border-radius: 5px;
+                    color: #FFF;
+                }
+
+                a:hover, &.active a {
+                    text-decoration: none;
+                    color: $main-color;
+                    background-color: #FFF;
+                }
+            }
+        }
+    }
+}

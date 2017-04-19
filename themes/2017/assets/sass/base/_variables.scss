@@ -1,0 +1,24 @@
+$background-color: #FFF;
+$base-font-family: "Open Sans", "Helvetica Neue", "Helvetica";
+$base-font-size:   16px;
+$base-line-height: $base-font-size * 1.8;
+$text-color:       #767572;
+
+$manala-font: "Sacramento";
+
+$main-color: #F66C51;
+$second-color: #D69D57;
+
+$headings-font-family:    "Open Sans", "Helvetica Neue", "Helvetica";
+$headings-font-weight:    600;
+$headings-line-height:    1.4;
+$headings-letter-spacing: 0;
+$headings-text-transform: none;
+$headings-color:          $second-color;
+$headings-small-color:    lighten($text-color, 30%);
+$headings-margin:         20px;
+
+$font-size-h1: 36px;
+$font-size-h2: 30px;
+$font-size-h3: 26px;
+$font-size-h4: 22px;
