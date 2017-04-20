@@ -1,4 +1,9 @@
+html { height: 100%; }
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     background: $background-color;
     font-family: $base-font-family;
     font-size: $base-font-size;
@@ -21,17 +26,16 @@ header.header {
 
 .container { display: flex; }
 .main { flex-direction: column; }
+.main, .content { flex-grow: 1; }
 
-aside.aside {
+.aside {
     padding: 0;
-    border: solid 1px #f1f1f1;
+    box-shadow: 0 2px 45px rgba(0, 0, 0, .1);
     border-radius: 3px;
-    background-color: #f7f7f7;
 }
 
 .intro {
-    width: 100%;
-    max-width: 720px;
+    width: 90%;
     padding: 0 15px;
     margin: 0 auto 90px auto;
     text-align: center;
