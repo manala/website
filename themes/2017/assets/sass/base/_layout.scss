@@ -74,15 +74,11 @@ footer.footer {
     .manala {
         font-size: 60px;
 
-        img {
-            width: 56px;
-            height: 56px;
-        }
+        img { @include size(56px); }
     }
 
     .github img {
-        width: 32px;
-        height: 32px;
+        @include size(32px);
         margin: 12px 0;
     }
 
@@ -90,8 +86,7 @@ footer.footer {
         text-align: right;
 
         img {
-            width: 63px;
-            height: 24px;
+            @include size(63px, 24px);
             margin: 15px 0 17px 2px;
         }
     }
