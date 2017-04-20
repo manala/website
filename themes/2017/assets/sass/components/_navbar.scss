@@ -3,7 +3,7 @@
     z-index: 100;
     margin-bottom: 80px;
 
-    > .container {
+    > .container-fluid {
         display: flex;
         flex-direction: row;
         align-items: baseline;
@@ -26,8 +26,7 @@
     }
 
     nav {
-        float: right;
-
+        text-align: center;
         ul {
             list-style: none;
             margin: 0;
