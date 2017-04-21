@@ -6,7 +6,7 @@
     > .container-fluid {
         display: flex;
         flex-direction: row;
-        align-items: baseline;
+        align-items: center;
     }
 
     nav, .logo { margin-top: 10px; }
@@ -47,6 +47,19 @@
                     color: $main-color;
                     background-color: #FFF;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        .logo { font-size: 60px; line-height: 60px;}
+
+        nav {
+            text-align: right;
+            ul {
+                text-align: right;
             }
         }
     }
