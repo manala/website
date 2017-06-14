@@ -15,8 +15,8 @@ menu:
         URL:        "/howto"
         Weight:     80
       - Name:       "Deployment"
-        Identifier: "deploy"
-        URL:        "/deploy"
+        Identifier: "deployment"
+        URL:        "/deployment"
         Weight:     90
       - Name:       "About"
         Identifier: "about"
@@ -26,13 +26,16 @@ menu:
       #  Identifier: "contributors"
       #  URL:        "/contributors"
       #  Weight:     110
-  deploy:
-      - Name:       "Mon lien 1"
-        Identifier: "mon-lien-1"
-        URL:        "/about/mon-lien-1"
-      - Name:       "Mon lien 2"
+  deployment:
+      - Name:       "Overview"
+        Identifier: "deployement_overview"
+        URL:        "/deployment/overview"
+        Weight:     10
+      - Name:       "Getting started"
         Identifier: "mon-lien-2"
-        URL:        "/about/mon-lien-2"
+        URL:        "/deployment/getting-started"
+        Weight:     20
       - Name:       "Mon lien 3"
         Identifier: "mon-lien-3"
         URL:        "/about/mon-lien-3"
+        Weight:     30
