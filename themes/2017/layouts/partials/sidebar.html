@@ -2,7 +2,7 @@
     <nav class="fixed">
         <ul>
             {{ $currentNode := . }}
-            {{ range .Site.Menus.sidebar }}
+            {{ range (index .Site.Menus .Type) }}
                 <li {{ if ($currentNode.HasMenuCurrent "sidebar" .) }} class="active" {{end}}><a href="{{.URL}}">{{ .Name }}</a></li>
             {{ end }}
         </ul>

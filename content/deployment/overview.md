@@ -1,5 +1,5 @@
 ---
-type:               "page"
+type:               "deployment"
 title:              "Remote server automation and deployment tool"
 date:               "2017-06-10"
 publishdate:        "2017-06-10"

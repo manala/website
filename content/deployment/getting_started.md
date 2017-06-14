@@ -1,11 +1,11 @@
 ---
-type:               "page"
-title:              "Deploying my app with Manala"
+type:               "deployment"
+title:              "Getting started"
 date:               "2017-06-10"
 publishdate:        "2017-06-10"
 draft:              true
-slug:               "deploying-my-app-with-manala"
-description:        "Deploying applications with the manala project."
+slug:               "getting-started"
+description:        "Remote server automation and deployment tool - Getting started."
 
 author_username:    "gfaivre"
 ---
