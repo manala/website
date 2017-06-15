@@ -28,14 +28,35 @@ menu:
       #  Weight:     110
   deployment:
       - Name:       "Overview"
+        URL:        "#"
+        Identifier: "overview"
+        Weight:     10
+      - Name:       "What is the Manala deployment"
+        Parent:     overview
         Identifier: "deployement_overview"
         URL:        "/deployment/overview"
-        Weight:     10
+        Weight:     11
       - Name:       "Getting started"
-        Identifier: "mon-lien-2"
-        URL:        "/deployment/getting-started"
+        Identifier: "getting-started"
+        URL:        "#"
         Weight:     20
-      - Name:       "Mon lien 3"
-        Identifier: "mon-lien-3"
-        URL:        "/about/mon-lien-3"
+      - Name:       "Features"
+        Parent:     getting-started
+        URL:        "/deployment/features"
+        Weight:     21
+      - Name:       "Structure"
+        Parent:     getting-started
+        URL:        "/deployment/structure"
+        Weight:     22
+      - Name:       "Configuration"
+        Parent:     getting-started
+        URL:        "/deployment/configuration"
+        Weight:     23
+      - Name:       "Advanced configuration"
+        Identifier: "advanced"
+        URL:        "/deployment/advanced"
         Weight:     30
+      - Name:       "Overriding"
+        Parent:     advanced
+        URL:        "/deployment/overriding"
+        Weight:     31
