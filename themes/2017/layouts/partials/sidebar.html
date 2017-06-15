@@ -1,10 +1,14 @@
 <div class="col-sm-3 sidebar">
     <nav class="fixed">
-        <ul>
             {{ $currentNode := . }}
             {{ range (index .Site.Menus .Type) }}
-                <li {{ if ($currentNode.HasMenuCurrent "sidebar" .) }} class="active" {{end}}><a href="{{.URL}}">{{ .Name }}</a></li>
+            <ul>
+              <h3><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></h3>
+              {{ range .Children }}
+                  <li {{ if ($currentNode.HasMenuCurrent "sidebar" .) }} class="active" {{ end }}><a href="{{ .URL }}">{{ .Name }}</a></li>
+              {{ end }}
+            </ul>
             {{ end }}
-        </ul>
+
     </nav>
 </div>
