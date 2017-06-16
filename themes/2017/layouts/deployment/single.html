@@ -2,8 +2,8 @@
 <body>
     {{ partial "nav.html" . }}
     <div class="container">
-        <div class="col-9">{{ .Content }}</div>
-        <div class="col-3">{{ partial "sidebar.html" . }}</div>
+        <div class="col-md-9 main-content">{{ .Content }}</div>
+        <div class="col-md-3 sidenav">{{ partial "sidebar.html" . }}</div>
     </div>
     {{ partial "footer.html" . }}
 </body>

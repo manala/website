@@ -74,6 +74,7 @@ p {
 ul {
     padding-left: 0;
     list-style: none;
+    margin-bottom: 2rem;
 
     li {
         position: relative;
@@ -92,6 +93,8 @@ ul {
     }
 
     &.no-bullet {
+        margin-bottom: 1rem;
+
         li { padding-left: 0; }
         li:before { display: none; }
     }
@@ -109,3 +112,5 @@ hr {
         margin-bottom: $base-line-height*2;
     }
 }
+
+b { color: $second-color; }
