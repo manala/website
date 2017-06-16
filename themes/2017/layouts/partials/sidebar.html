@@ -1,14 +1,11 @@
-<div class="col-sm-3 sidebar">
-    <nav class="fixed">
-            {{ $currentNode := . }}
-            {{ range (index .Site.Menus .Type) }}
-            <ul>
-              <h3><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></h3>
-              {{ range .Children }}
-                  <li {{ if ($currentNode.HasMenuCurrent "sidebar" .) }} class="active" {{ end }}><a href="{{ .URL }}">{{ .Name }}</a></li>
-              {{ end }}
-            </ul>
-            {{ end }}
-
-    </nav>
-</div>
+<nav class="sidenav">
+  {{ $currentNode := . }}
+  {{ range (index .Site.Menus .Type) }}
+  <ul class="no-bullet">
+    <h3><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></h3>
+    {{ range .Children }}
+    <li {{ if ($currentNode.HasMenuCurrent "sidebar" .) }} class="active" {{ end }}><a href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</nav>

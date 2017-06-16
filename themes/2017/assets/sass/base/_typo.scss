@@ -73,6 +73,28 @@ p {
 
 ul {
     padding-left: 0;
+    list-style: none;
+
+    li {
+        position: relative;
+        padding-left: 15px;
+
+        &:before {
+            @include size(7px);
+            content: '';
+            display: inline-block;
+            position: absolute;
+            background-color: $main-color;
+            top: 10px;
+            left: 0;
+            border-radius: 50px;
+        }
+    }
+
+    &.no-bullet {
+        li { padding-left: 0; }
+        li:before { display: none; }
+    }
 }
 
 hr {
