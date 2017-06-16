@@ -137,6 +137,11 @@ footer.footer {
             text-align: left;
         }
     }
+
+    .main-content { order: 2; }
+    .sidenav { order: 1; }
+
+    .container { width: 100%; }
 }
 
 @media (max-width: 576px) {
