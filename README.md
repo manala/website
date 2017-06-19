@@ -37,3 +37,16 @@ To display a media into a post use Hugo shortcode `figure` like the following:
     {{< figure src="/images/posts/2014/proxmox_partition_elao_1000.png" title="Partitionnement personnalisé" alt="Partitionnement-d-un-serveur-proxmox - Partitionnement personnalisé">}}
 </p>
 ```
+
+## Expose your current branch (for review)
+
+Every branch pushed to remote `origin` is deployed to staging in order to share your work in progress with the rest of the team :
+
+`http://<my-branch>.manala.elao.ninja/`
+
+> :warning: The branch name is normalized : all special characters such as `/` or `_` are replaced with an hyphen (`-`).
+
+As an example, here is the staging URL for the `master` branch :
+
+http://master.manala.elao.ninja/
+
