@@ -1,11 +1,14 @@
 <nav>
-  {{ $currentNode := . }}
-  {{ range (index .Site.Menus .Type) }}
+  {{ $currentPage := . }}
   <ul class="no-bullet">
-    <h3><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></h3>
-    {{ range .Children }}
-    <li {{ if ($currentNode.HasMenuCurrent "sidebar" .) }} class="active" {{ end }}><a href="{{ .URL }}">{{ .Name }}</a></li>
+  {{ range (index .Site.Menus .Type) }}
+
+    {{ if .HasChildren }}
+      <h3><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></h3>
+      {{ range .Children }}
+      <li {{ if ($currentPage.IsMenuCurrent "deployment" .) }} class="active" {{ end }}><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
     {{ end }}
-  </ul>
   {{ end }}
+  </ul>
 </nav>

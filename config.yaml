@@ -16,7 +16,7 @@ menu:
         Weight:     80
       - Name:       "Deployment"
         Identifier: "deployment"
-        URL:        "/deployment"
+        URL:        "/deployment/overview"
         Weight:     90
       - Name:       "About"
         Identifier: "about"
@@ -28,7 +28,7 @@ menu:
       #  Weight:     110
   deployment:
       - Name:       "Overview"
-        URL:        "#"
+        URL:        "/deployment/overview#"
         Identifier: "overview"
         Weight:     10
       - Name:       "What is the Manala deployment"
@@ -38,15 +38,15 @@ menu:
         Weight:     11
       - Name:       "Getting started"
         Identifier: "getting-started"
-        URL:        "#"
+        URL:        "/deployment/features#"
         Weight:     20
       - Name:       "Features"
         Parent:     getting-started
         URL:        "/deployment/features"
         Weight:     21
-      - Name:       "Structure"
+      - Name:       "Preparing your project"
         Parent:     getting-started
-        URL:        "/deployment/structure"
+        URL:        "/deployment/preparing-your-project"
         Weight:     22
       - Name:       "Configuration"
         Parent:     getting-started
@@ -54,9 +54,13 @@ menu:
         Weight:     23
       - Name:       "Advanced configuration"
         Identifier: "advanced"
-        URL:        "/deployment/advanced"
+        URL:        "/deployment/symfony-deploy-from-git#"
         Weight:     30
-      - Name:       "Overriding"
+      - Name:       "Symfony deploy from GIT"
         Parent:     advanced
-        URL:        "/deployment/overriding"
+        URL:        "/deployment/symfony-deploy-from-git"
         Weight:     31
+      - Name:       "Symfony deploy from local build"
+        Parent:     advanced
+        URL:        "/deployment/deploy-from-local-build"
+        Weight:     32
