@@ -5,7 +5,7 @@
 HUGO_THEME = 2016
 
 include  manala/make/Makefile
--include Makefile.local
+-include .env
 
 ################
 # Environments #

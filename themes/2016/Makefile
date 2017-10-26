@@ -23,16 +23,22 @@ include ../../manala/make/Makefile
 
 ## Install - Development
 install@development:
+	$(call log,Clean)
+	rm -Rf node_modules
 	$(call log,Yarn)
 	yarn install
 
 ## Install - Staging
 install@staging:
+	$(call log,Clean)
+	rm -Rf node_modules
 	$(call log,Yarn)
 	yarn install
 
 ## Install - Production
 install@production:
+	$(call log,Clean)
+	rm -Rf node_modules
 	$(call log,Yarn)
 	yarn install
 
